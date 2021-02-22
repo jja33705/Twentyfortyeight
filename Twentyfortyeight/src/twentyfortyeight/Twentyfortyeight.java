@@ -250,7 +250,7 @@ public class Twentyfortyeight extends JFrame implements ActionListener, KeyListe
 			numbers = newBoard;
 			this.repaint();
 			
-			Timer timer = new Timer();                //0.2초정도 후에 새로운 블럭 그려줌....
+			Timer timer = new Timer();                
 			TimerTask task = new TimerTask() {
 				@Override
 				public void run() {
@@ -260,7 +260,7 @@ public class Twentyfortyeight extends JFrame implements ActionListener, KeyListe
 					timer.cancel();
 				}
 			};
-			timer.schedule(task, 200);
+			timer.schedule(task, 170);              //0.17초정도 후에 새로운 블럭 그려줌....
 		}
 	}
 
