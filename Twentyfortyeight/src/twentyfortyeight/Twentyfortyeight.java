@@ -30,15 +30,16 @@ public class Twentyfortyeight extends JFrame implements ActionListener, KeyListe
 		this.setLayout(null);
 		
 		GameBoard gameBoard = new GameBoard();
-		gameBoard.setBounds(100, 140, 402, 401);
+		gameBoard.setBounds(80, 140, 402, 401);
 		this.add(gameBoard);
 		
 		ScoreBoard scoreBoard = new ScoreBoard();
-		scoreBoard.setBounds(100, 20, 400, 100);
+		scoreBoard.setBounds(80, 20, 400, 100);
 		this.add(scoreBoard);
 		
 		JButton startButton = new JButton("시작");
-		startButton.setBounds(510, 40, 60, 60);
+		startButton.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 15));
+		startButton.setBounds(490, 30, 80, 80);
 		startButton.setFocusable(false);
 		startButton.setBackground(Color.WHITE);
 		startButton.addActionListener(this);
@@ -244,6 +245,7 @@ public class Twentyfortyeight extends JFrame implements ActionListener, KeyListe
 				}
 			}
 			break;
+			default: return;    //입력된 키가 방향키가 아니면 리턴
 		}
 		
 		if(isMoved(numbers, newBoard)) {  
